@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WoB</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>WORLD OF BUGS</h1>
+        </header>
+         
+        <section>
+            <h1>ESCOLHA SEU PERSONAGEM</h1>
+            <form>
+                <fieldset>
+                    <label>Nome:</label>
+                    <input type="text" placeholder="Ex: Hayalet" disabled>
+                    <label>Altura:</label>
+                    <input type="range" min="0,0" max="4,0" value="0" >
+                        
+
+                    <p>
+                        <label>Classe:</label>
+                        <select id="classe" onchange="exibeAtributo()">
+                            <option value="undefined"></option>
+                            <option value="guerreiro">Warrior</option>
+                            <option value="paladino">Paladin</option>
+                            <option value="druida">Druid</option>
+                            <option value="shaman">Shaman</option>
+                            <option value="hunter">Hunter</option>
+                            <option value="mago">Mage</option>
+                        </select>
+
+                        <label>Raça:</label>
+                        <select id="raca" onchange="selRaca()">
+                            <option value="undefined"></option>
+                            <option value="argo">Argo</option>
+                            <option value="elfo">Elfo</option>
+                            <option value="troll">Troll</option>
+                            <option value="drake">Drake</option>
+                            <option value="vulper">Vulper</option>
+                            <option value="demon">Demon</option>
+                        </select>
+                    
+                        <label for="sexo">Sexo:</label>
+                        <input type="radio" name="sex" value="m" onchange="selRaca()">M
+                        <input type="radio" name="sex" value="f" onchange="selRaca()">F <!-- primeiro bug corrigido-->
+                               
+                    </p>
+                    
+                    <img id="foto">
+                    <div id="resraca"></div>
+                    <div id="atributos"></div>
+
+
+
+
+                    <!--Capacete | Torso | Botas | Braços | Mãos | Costas
+                    <div id="armaduraEsquerda">
+                        <select id="armadura">
+                            <option value="">selecione sua armadura com base na classe</select>
+                        </select>
+                    </div>      -->    
+                    
+                    
+                </fieldset>
+            </form>
+
+            <div id="salvar">
+                <input type="button" value="CONFIRMAR" onclick="confirmar()">
+        
+
+        </section>
+        
+
+        <footer>
+            <p>&copy; GhostVon Corporation</p>
+        </footer>
+       
+    </body>
+ 
+</html>
+
