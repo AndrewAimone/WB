@@ -6,9 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WoB</title>
         <link rel="stylesheet" href="./utils/style.css">
-        <script src="./mec01/script.js" type="module" ></script>
-        <script src="./mec01/classes.js" type="module"></script>
-        <script src="./mec01/ExibeAtributo.js" type="module"></script>
+        <script src="./utils/script.js" type="module" ></script>
+        <script src="./utils/classes.js" type="module"></script>
+        <script src="./utils/ExibeAtributo.js" type="module"></script>
+        <script src="./utils/SelecionaRaca.js" type="module"></script>
     </head>
     <body>
         <header>
@@ -27,7 +28,7 @@
 
                     <p>
                         <label>Classe:</label>
-                        <select id="classe" onchange="exibeAtributo()">
+                        <select id="classe">
                             <option value="undefined"></option>
                             <option value="guerreiro">Warrior</option>
                             <option value="paladino">Paladin</option>
@@ -38,7 +39,7 @@
                         </select>
 
                         <label>Raça:</label>
-                        <select id="raca" onchange="selRaca()">
+                        <select id="raca">
                             <option value="undefined"></option>
                             <option value="argo">Argo</option>
                             <option value="elfo">Elfo</option>
@@ -49,8 +50,8 @@
                         </select>
                     
                         <label for="sexo">Sexo:</label>
-                        <input type="radio" name="sex" value="m" onchange="selRaca()">M
-                        <input type="radio" name="sex" value="f" onchange="selRaca()">F <!-- primeiro bug corrigido-->
+                        <input type="radio" name="sex" value="m" class="inputsexo">M
+                        <input type="radio" name="sex" value="f" class="inputsexo">F <!-- primeiro bug corrigido-->
                                
                     </p>
                     
